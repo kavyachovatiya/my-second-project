@@ -1,0 +1,55 @@
+#include<stdio.h>
+int main()
+{
+	float sub1, sub2, sub3;
+	float total, average;
+
+	printf("enter marks for subject 1:");
+	scanf("%f", &sub1);
+
+	printf("enter marks for subject 2:");
+	scanf("%f", &sub2);
+
+	printf("enter marks for subject 3:");
+	scanf("%f", &sub3);
+
+	total = sub1 + sub2 + sub3;
+	average = total / 3;
+
+	printf("\ntotal: %.2f", total);
+	printf("\naverage: %.2f\n", average);
+
+	if (sub1 <35 || sub2 < 35 || sub3 < 35)
+{
+	printf("grade: fail\n");
+}
+	else if (average >= 70)
+{
+	printf("grade: distinction\n");
+}
+	else if (average >= 60)
+{
+	printf("grade: first class\n");
+}
+	else if (average >= 50)
+{
+	printf("grade: second class\n");
+}
+	else if (average >= 35)
+{
+	printf("grade: third class\n");
+}
+	else
+{
+	printf("grade: fail\n");
+}
+	return 0;
+}
+
+	
+
+
+
+
+	
+	
