@@ -1,0 +1,49 @@
+#include <stdio.h>
+
+int main()
+{
+	long long num,square,tempNum;
+	int isAutomorphic = 1;
+
+	printf("enter a positive integer:");
+	scanf("%lld", &num);
+
+	if(num < 0)
+
+	{
+		printf("%lld is not an automorphic number.\n", num);
+		return 0;
+	}
+
+	square = num*num;
+	tempNum = num;
+
+	while(tempNum > 0)
+
+	{
+		if(tempNum % 10 != square % 10)
+			
+		{
+			isAutomorphic = 0;
+			break;
+		}
+	
+		tempNum /= 10;
+		square /= 10;
+	}
+
+	if(isAutomorphic == 1)
+	
+	{
+		printf("%lld is an Automorphic number (square = %lld).\n", num, num*num);
+	}
+
+	else
+
+	{
+		printf("%lld is an Automorphic number (square = %lld).\n", num, num*num);
+	}
+
+	return 0;
+}
+		
