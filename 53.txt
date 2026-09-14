@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main()
+{
+	long long num, temp;
+	int sum = 0, remainder;
+
+	printf("enter an integer:");
+	scanf("%lld", &sum);
+
+	temp = num;
+		
+		if (temp < 0)
+		
+		{
+			temp = -temp;
+		}
+
+	while (temp > 0)
+		
+		{
+			remainder = temp % 10;
+			sum += remainder;
+			temp /= 10;
+		}
+
+	printf("Summation of digits of %lld is %d\n", num, sum);
+	return 0;
+}

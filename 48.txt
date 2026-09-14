@@ -1,0 +1,55 @@
+#include <stdio.h>
+
+int main()
+{
+	int total_students = 50;
+	int count = 1;
+	int sex_code; 
+	int boys = 0, girls = 0, invalid = 0;
+
+	printf("--- enter sex code for 50 students ---\n");
+	printf("1 = boy, 2 =girl\n\n");	
+	
+	while (count <= total_students)
+
+	{
+		printf("enter sex code for  student %d: ", count);
+		scanf("%d", &sex_code);
+
+		if (sex_code == 1)
+		
+		{
+			boys++;
+		}
+		
+		else if (sex_code == 2)
+		
+		{
+			girls++;
+		}
+
+		else
+
+		{
+			printf("invalid code entered! please enter 1 for boy or 2 for girl.\n");
+			invalid++;
+		}
+
+		count++;
+	}
+
+	printf("\n==============================================\n");
+	printf("		SUMMARY RESULTS			\n");             
+	printf("================================================\n");
+	printf("total boys : %d\n", boys);
+	printf("total girls : %d\n", girls);
+	if (invalid > 0)
+
+	{
+		printf("invalid inputs: %d\n", invalid);
+	}
+	
+	return 0;
+}
+		
+	

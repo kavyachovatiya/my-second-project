@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main()
+{
+	int i;
+	float num, min, max;
+
+	printf("enter number 1:");
+	scanf("%f", &num);
+
+	min = num;
+	max = num;
+
+	for (i=2; i<=100; i++)
+
+	{
+
+		printf("enter number %d:",i);
+		scanf("%f", &num);
+
+		if (num > max)
+		{
+			max = num;
+		}
+		if (num < min)
+		{
+			min = num;
+		}
+	}
+	
+	printf("\n--- Result ---\n");
+	printf("largest number: %.2f\n",max);
+	printf("smallest number: %.2f\n",min);
+
+	return 0;
+}                                                                                                                                                                                                                                                                                           

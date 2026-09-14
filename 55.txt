@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main()
+{
+	long long num, temp;
+	long long reversed = 0;
+	int remainder;
+
+	printf("enter an integer:");
+	scanf("%lld", &num);
+
+	if (num < 0)
+		{
+			printf("%lld is not a palindrome number.\n", num);
+			return 0;
+		}
+			
+	temp = num;
+
+	while (temp != 0)
+		
+		{
+			remainder = temp % 10;
+			reversed = reversed * 10 + remainder;
+			temp /= 10;
+		}
+
+	if (num == reversed)
+		{
+			printf("%lld is a palindrome number.\n", num);
+		}
+	
+	else
+
+		{
+			printf("%lld is not a palindrome number.\n", num);
+		}
+		
+	return 0;
+}
